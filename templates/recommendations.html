@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Recommendations for "{{ song }}"</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Music Recommendations for "{{ song }}"</h1>
+
+    <!-- Check if there are any recommendations -->
+    {% if recommendations %}
+        <ul>
+            <!-- Loop through each recommended song -->
+            {% for rec in recommendations %}
+                <li>
+                    <strong>Song:</strong> {{ rec[1] }}<br>
+                    <strong>Artist:</strong> {{ rec[2] }}<br>
+                    <strong>Similarity Score:</strong> {{ rec[0] | round(3) }}  <!-- Display similarity score with three decimal places -->
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recommendations found for "{{ song }}". Please try a different song.</p>
+    {% endif %}
+
+    <!-- Link to return to the homepage -->
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
