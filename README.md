@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Music recommender system
 
 A **recommender** (or recommendation) **system** (or engine) is a filtering system which aim is to predict a rating or preference a user would give to an item, eg. a film, a product, a song, etc.
@@ -38,3 +39,6 @@ II. **Collaborative recommendation system**:
  
   a. A jupyter notebook named `collaborative_music_recommender` that contains the code and analysis for the recommedation system.  
   b. A `CSV` file named `songs` containing the data for the songs used in the system.
+=======
+# music-recommender
+>>>>>>> 113d2dc3066491332d7e0bf8edb1f090ea1e02fd
